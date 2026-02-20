@@ -1,0 +1,123 @@
+{
+    "name": "VedantFlow",
+    "title": "AI Security Researcher",
+    "email": "flowvedant@gmail.com",
+    "phone": "+880 1XXX-XXXXXX",
+    "location": "Dhaka, Bangladesh",
+    "summary": "AI Security Specialist with hands-on experience in web application security and emerging expertise in AI/ML security testing. Completed intensive 480+ hour AI Security specialization covering adversarial ML, LLM security, prompt injection, privacy attacks, and production ML security. Proven track record in vulnerability discovery through bug bounty programs and security assessments. Passionate about securing AI systems against evolving threats and bridges the gap between traditional cybersecurity and the future of AI.",
+    "skills": [
+        {
+            "name": "Adversarial Machine Learning",
+            "level": 95,
+            "category": "AI Security"
+        },
+        {
+            "name": "LLM Security Testing",
+            "level": 90,
+            "category": "AI Security"
+        },
+        {
+            "name": "Web Application Security",
+            "level": 85,
+            "category": "General Security"
+        },
+        {
+            "name": "API Security Testing",
+            "level": 80,
+            "category": "General Security"
+        },
+        {
+            "name": "Penetration Testing",
+            "level": 85,
+            "category": "General Security"
+        },
+        {
+            "name": "Bug Bounty Hunting",
+            "level": 75,
+            "category": "General Security"
+        },
+        {
+            "name": "PyTorch & TensorFlow",
+            "level": 80,
+            "category": "AI Tools"
+        },
+        {
+            "name": "Security Automation",
+            "level": 70,
+            "category": "General Security"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Computer Security Specialist",
+            "company": "Nexus Tech",
+            "period": "July 2025 - Nov 2025",
+            "achievements": [
+                "Conducted web application security assessments identifying 15+ critical vulnerabilities.",
+                "Developed automated scanning scripts reducing assessment time by 40%."
+            ]
+        },
+        {
+            "title": "Independent Security Researcher",
+            "company": "Self-Employed",
+            "period": "Jan 2024 - Present",
+            "achievements": [
+                "Participated in HackerOne, Bugcrowd, and Synack bug bounty programs.",
+                "Discovered and disclosed 15+ valid vulnerabilities in authentication and access control systems."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Sc. in Computer Science",
+            "university": "Gopalganj Science and Technology",
+            "year": "2026 (Expected)"
+        },
+        {
+            "degree": "AI Security Specialist Certification",
+            "university": "Self-Directed",
+            "year": "480+ Hours Completion"
+        }
+    ],
+    "projects": [
+        {
+            "name": "LLM Security Scanner",
+            "description": "Comprehensive security testing framework for LLMs, implementing 100+ prompt injection tests and jailbreak techniques.",
+            "github": "https://github.com/VedantFlow/llm-security-scanner",
+            "demo": "#",
+            "tech": [
+                "Python",
+                "OpenAI",
+                "LangChain",
+                "FastAPI"
+            ]
+        },
+        {
+            "name": "Adversarial ML Suite",
+            "description": "Built end-to-end framework supporting FGSM, PGD, C&W attacks. Implemented DP-SGD and physical patches.",
+            "github": "https://github.com/VedantFlow/adversarial-ml-suite",
+            "demo": "#",
+            "tech": [
+                "PyTorch",
+                "ART",
+                "NumPy"
+            ]
+        },
+        {
+            "name": "Secure RAG Framework",
+            "description": "Designed production-ready RAG with document-level access control, context validation, and output filtering.",
+            "github": "https://github.com/VedantFlow/secure-rag-framework",
+            "demo": "#",
+            "tech": [
+                "LlamaIndex",
+                "FAISS",
+                "PostgreSQL"
+            ]
+        }
+    ],
+    "social_links": {
+        "linkedin": "https://www.linkedin.com/in/vedantflow/",
+        "github": "https://github.com/VedantFlow",
+        "x": "https://x.com/VedantFlow"
+    }
+}

@@ -1,0 +1,300 @@
+:root {
+    --bg-color: #050816;
+    --card-bg: rgba(10, 14, 39, 0.7);
+    --neon-green: #00ff41;
+    --neon-cyan: #00ffff;
+    --neon-purple: #8000ff;
+    --neon-red: #ff0055;
+    --text-color: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --primary-font: 'JetBrains Mono', monospace;
+    --title-font: 'Orbitron', sans-serif;
+    --glitch-font: 'Press Start 2P', cursive;
+    --terminal-font: 'Space Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    overflow: hidden;
+    /* Lenis handles scrolling */
+    line-height: 1.6;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    pointer-events: none;
+    /* Let clicks pass to 3D if needed, but we'll enable pointer-events on cards */
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    width: 300px;
+}
+
+.progress-bar-container {
+    height: 4px;
+    width: 100%;
+    background: rgba(0, 255, 65, 0.1);
+    margin: 20px 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
+    transition: width 0.3s ease;
+}
+
+.status-text {
+    font-family: var(--terminal-font);
+    font-size: 0.8rem;
+    color: var(--neon-green);
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.cyber-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: auto;
+    background: linear-gradient(to bottom, rgba(5, 8, 22, 0.8), transparent);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--neon-green);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--neon-cyan);
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--neon-cyan);
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.access-status {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.granted {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+/* Sections */
+#scroll-container {
+    width: 100%;
+}
+
+.scene-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 5%;
+}
+
+.content-section {
+    pointer-events: auto;
+    /* Allow interactions */
+}
+
+.section-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.cyber-title {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.cyber-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--neon-cyan);
+    filter: blur(2px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.file-name {
+    font-size: 0.7rem;
+    color: var(--neon-cyan);
+    font-family: var(--terminal-font);
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Grid Layouts */
+.skills-grid,
+.projects-grid,
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Footer */
+.cyber-footer {
+    padding: 40px;
+    background: rgba(5, 8, 22, 0.9);
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.footer-info {
+    display: flex;
+    gap: 40px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.status {
+    color: var(--neon-green);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .cyber-title {
+        font-size: 2rem;
+    }
+
+    .scene-section {
+        padding: 50px 20px;
+    }
+}

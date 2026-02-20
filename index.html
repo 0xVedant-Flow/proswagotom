@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM BREACHED | VedantFlow Portfolio</title>
+    <meta name="description" content="Cinematic 3D Hacking Portfolio of VedantFlow, AI Security Researcher.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/neon.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body class="hacking-theme">
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="glitch" data-text="INITIALIZING EXPLOIT...">INITIALIZING EXPLOIT...</div>
+            <div class="progress-bar-container">
+                <div id="loader-progress" class="progress-bar"></div>
+            </div>
+            <div id="loader-status" class="status-text">Bypassing Firewalls...</div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="ui-overlay" class="overlay">
+        <!-- Navigation -->
+        <nav class="cyber-nav">
+            <div class="logo">V_FLOW<span>[ADMIN]</span></div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-item active">INTRO</a>
+                <a href="#about" class="nav-item">SCAN</a>
+                <a href="#skills" class="nav-item">ARSENAL</a>
+                <a href="#experience" class="nav-item">MISSIONS</a>
+                <a href="#projects" class="nav-item">VAULT</a>
+                <a href="#contact" class="nav-item">UP-LINK</a>
+            </div>
+            <div class="access-status">ACCESS: <span class="granted">GRANTED</span></div>
+        </nav>
+
+        <div class="scroll-container" id="scroll-container">
+            <!-- SECTION 1: THE BREACH (Hero) -->
+            <section id="hero" class="scene-section hero-scene">
+                <div class="monitor-overlay">
+                    <div class="glitch-title-container">
+                        <h1 class="hack-title glitch" data-text="SYSTEM HACKED">SYSTEM HACKED</h1>
+                        <div class="identity-badge">
+                            <div class="identity-photo">
+                                <img src="./assets/images/photo.png" alt="Digital Identity">
+                            </div>
+                            <span class="label">IDENTITY:</span>
+                            <span class="value" id="user-name">VEDANT_FLOW</span>
+                        </div>
+                        <div class="title-badge">
+                            <span class="label">PRO_TITLE:</span>
+                            <span class="value" id="user-title">AI_SECURITY_RESEARCHER</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: PENETRATION ANALYSIS (About) -->
+            <section id="about" class="scene-section content-section">
+                <div class="section-container">
+                    <div class="glass-card terminal-card reveal-up">
+                        <div class="card-header">
+                            <span class="file-name">MISSION_OBJECTIVE.txt</span>
+                            <div class="window-controls">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="typing-container">
+                                <span id="about-text" class="typed-text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: SKILL EXPLOITATION -->
+            <section id="skills" class="scene-section content-section">
+                <div class="section-container">
+                    <h2 class="cyber-title">EXPLOIT_ARSENAL</h2>
+                    <div class="skills-grid" id="skills-container">
+                        <!-- Skills injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: OPERATION TIMELINE -->
+            <section id="experience" class="scene-section content-section">
+                <div class="section-container">
+                    <h2 class="cyber-title">MISSION_LOG</h2>
+                    <div class="timeline" id="experience-container">
+                        <!-- Experience injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: PROJECT VAULT -->
+            <section id="projects" class="scene-section content-section">
+                <div class="section-container">
+                    <h2 class="cyber-title">SECURED_REPOS</h2>
+                    <div class="projects-grid" id="projects-container">
+                        <!-- Projects injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: CREDENTIALS (Education) -->
+            <section id="education" class="scene-section content-section">
+                <div class="section-container">
+                    <h2 class="cyber-title">SECURITY_CLEARANCE</h2>
+                    <div class="education-grid" id="education-container">
+                        <!-- Education injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: SYSTEM ACCESS (Contact) -->
+            <section id="contact" class="scene-section content-section">
+                <div class="section-container">
+                    <h2 class="cyber-title">INITIATE_UP_LINK</h2>
+                    <div class="contact-terminal glass-card reveal-up">
+                        <form id="contact-form" class="cyber-form">
+                            <div class="input-group">
+                                <label for="name">ID_NAME:</label>
+                                <input type="text" id="name" name="name" placeholder="Who are you?" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">PROTOCOL_EMAIL:</label>
+                                <input type="email" id="email" name="email" placeholder="Where to respond?" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="message">TRANSMISSION:</label>
+                                <textarea id="message" name="message" placeholder="Encoded message details..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="cyber-btn">
+                                <span class="btn-text">INITIATE_PROTOCOL</span>
+                                <span class="btn-glitch"></span>
+                            </button>
+                        </form>
+                        <div class="social-links" id="social-container">
+                            <!-- Social links injected here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="cyber-footer">
+                <div class="footer-info">
+                    <span class="copyright">&copy; 2026 V_FLOW // PROJECT ANTI-GRAVITY</span>
+                    <span class="status">STATUS: STEALTH_MODE_ACTIVE</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
