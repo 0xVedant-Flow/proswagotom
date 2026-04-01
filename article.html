@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECRYPTING... | Swagotom Portfolio</title>
+    <meta name="description" content="Cyber Security Article by Swagotom.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/neon.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <style>
+        .article-card {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 8px;
+            backdrop-filter: blur(15px);
+            background: rgba(10, 14, 39, 0.85);
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.15);
+        }
+        
+        .article-header {
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 20px 30px;
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .article-header h1 {
+            font-family: var(--title-font);
+            font-size: 2.2rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .article-meta {
+            font-family: var(--terminal-font);
+            font-size: 0.85rem;
+            color: var(--neon-green);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .article-body {
+            padding: 40px;
+            color: var(--text-color);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre-wrap; /* Allows formatting from JSON directly */
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-family: var(--terminal-font);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+    </style>
+</head>
+
+<body class="hacking-theme">
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="glitch" data-text="DECRYPTING PAYLOAD...">DECRYPTING PAYLOAD...</div>
+            <div class="progress-bar-container">
+                <div id="loader-progress" class="progress-bar"></div>
+            </div>
+            <div id="loader-status" class="status-text">Bypassing Firewalls...</div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="ui-overlay" class="overlay">
+        <!-- Navigation -->
+        <nav class="cyber-nav">
+            <div class="logo">SWAGOTOM<span>[ADMIN]</span></div>
+            <div class="nav-links">
+                <a href="index.html#hero" class="nav-item">INTRO</a>
+                <a href="index.html#about" class="nav-item">SCAN</a>
+                <a href="index.html#skills" class="nav-item">ARSENAL</a>
+                <a href="index.html#experience" class="nav-item">MISSIONS</a>
+                <a href="index.html#projects" class="nav-item">VAULT</a>
+                <a href="posts.html" class="nav-item active">POSTS</a>
+                <a href="index.html#contact" class="nav-item">UP-LINK</a>
+            </div>
+            <div class="access-status">ACCESS: <span class="granted">GRANTED</span></div>
+        </nav>
+
+        <div class="scroll-container" id="scroll-container">
+            <section class="scene-section content-section" style="padding-top: 15vh; align-items: flex-start; min-height: calc(100vh - 80px);">
+                <div class="section-container">
+                    <a href="posts.html" class="back-link">< TERMINATE_CONNECTION (BACK)</a>
+                    
+                    <div id="article-container" class="glass-card article-card reveal-up">
+                        <!-- Content dynamically injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <footer class="cyber-footer">
+                <div class="footer-info">
+                    <span class="copyright">&copy; 2026 SWAGOTOM // PROJECT ANTI-GRAVITY</span>
+                    <span class="status">STATUS: STEALTH_MODE_ACTIVE</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

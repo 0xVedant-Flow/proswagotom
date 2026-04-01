@@ -1,10 +1,10 @@
 {
-    "name": "VedantFlow",
-    "title": "AI Security Researcher",
+    "name": "Swagotom",
+    "title": "Entrepreneur | Ethical Hacker | AI Security Specialist | Instructor",
     "email": "flowvedant@gmail.com",
     "phone": "+880 1XXX-XXXXXX",
     "location": "Dhaka, Bangladesh",
-    "summary": "AI Security Specialist with hands-on experience in web application security and emerging expertise in AI/ML security testing. Completed intensive 480+ hour AI Security specialization covering adversarial ML, LLM security, prompt injection, privacy attacks, and production ML security. Proven track record in vulnerability discovery through bug bounty programs and security assessments. Passionate about securing AI systems against evolving threats and bridges the gap between traditional cybersecurity and the future of AI.",
+    "summary": "I am a Cyber Security Specialist and Ethical Hacker focused on understanding systems at a deep level — not just using tools, but thinking like an attacker.\n\nI specialize in identifying vulnerabilities, testing security systems, and helping individuals and businesses stay protected in the digital world.\n\n💻 What I Do:\n • Penetration Testing\n • Web Application Security\n • Network Security Analysis\n • AI Security & Automation\n • Cyber Security Training (Beginner → Advanced)\n\n🧠 My Mindset:\n I don’t just follow tutorials — I break systems to understand them.\n Because every system has a weakness… and I find it.\n\n🚀 Currently:\n • Teaching Cyber Security\n • Building security-focused projects\n • Exploring advanced hacking techniques\n\n🔐 Goal:\n To build a strong, secure digital future and help others learn real-world cyber security.\n\n📩 Let’s connect and secure the digital world together.",
     "skills": [
         {
             "name": "Adversarial Machine Learning",
@@ -115,9 +115,32 @@
             ]
         }
     ],
+    "posts": [
+        {
+            "id": "AI_THREAT_MODEL_01",
+            "title": "The Future of AI Security",
+            "date": "2026.04.01 // TIMESTAMP_10482",
+            "summary": "Analyzing the latest trends in Large Language Model prompt injections. As adversaries develop zero-click exploits for ML agents...",
+            "content": "As AI agents become increasingly autonomous, the threat landscape is shifting dramatically. We are no longer just dealing with SQL injections; we are dealing with Prompt Injections, Data Poisoning, and Adversarial Examples.\n\nIn this research, I outline the primary vectors through which an autonomous agent can be compromised:\n\n1. **Direct Prompt Injection (Jailbreaking)**: Overriding the system instructions.\n2. **Indirect Prompt Injection**: Where the payload is hidden in a webpage the agent is instructed to read.\n3. **Model Inversion**: Extracting the exact training data that powers the weight parameters.\n\nSecuring these models requires a defense-in-depth approach, including robust input validation, output sanitization, and continuous red-teaming.\n\n### Conclusion\nAI Security isn't just a subset of AppSec; it's an entirely new paradigm."
+        },
+        {
+            "id": "WEB_PENETRATION_03",
+            "title": "Bypassing Modern WAFs",
+            "date": "2026.03.22 // TIMESTAMP_10211",
+            "summary": "Deep dive into polymorphic payloads and obfuscation techniques used to evade cloud-based Web Application Firewalls in 2026...",
+            "content": "Web Application Firewalls (WAFs) are excellent at catching script kiddies but remarkably fragile against a sophisticated attacker who understands context-aware encoding.\n\nThis article demonstrates how modern adversaries bypass signature-based and ML-based anomaly detection engines by utilizing polymorphic payloads.\n\n```javascript\n// A highly simplified example of payload obfuscation\nlet a = 'con'; let b = 'structor';\nlet payload = a+b;\n[][payload][payload]('alert(1)')();\n```\n\nThe key to bypassing is understanding the exact normalization process of the target WAF. Does it resolve specific HTML entities? Does it parse multi-part form boundary anomalies? By finding discrepancies between the WAF parser and the backend server parser (HTTP Desync), an attacker can slip malicious queries right through the defense perimeter."
+        },
+        {
+            "id": "ZERO_DAY_ANALYSIS",
+            "title": "Anatomy of a Zero-Day",
+            "date": "2026.02.15 // TIMESTAMP_09884",
+            "summary": "A step-by-step breakdown of how a critical RCE vulnerability in a major enterprise framework was weaponized...",
+            "content": "A Zero-Day vulnerability represents an asymmetric advantage for the attacker.\n\nIn this post, I perform a teardown of a recent Remote Code Execution (RCE) flaw discovered in a ubiquitous enterprise protocol.\n\n#### The Flaw\nThe vulnerability existed in the deserialization pipeline where aggressive type juggling was allowed. \n\nBy crafting a serialized object with a specifically tuned gadget chain, arbitrary execution was achieved under the context of the running service.\n\n#### The Fix\nMitigation required completely overhauling the dependency chain and explicitly forbidding untrusted deserialization. Never trust user input, especially if that input is serialized."
+        }
+    ],
     "social_links": {
-        "linkedin": "https://www.linkedin.com/in/vedantflow/",
-        "github": "https://github.com/VedantFlow",
-        "x": "https://x.com/VedantFlow"
+        "linkedin": "https://www.linkedin.com/in/swagotom/",
+        "github": "https://github.com/swagotom",
+        "x": "https://x.com/swagotom"
     }
 }

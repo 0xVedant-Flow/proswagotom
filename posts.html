@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECURE LOGS | Swagotom Portfolio</title>
+    <meta name="description" content="Cyber Security and AI Logs by Swagotom.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/neon.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <style>
+        .hover-glow {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 255, 65, 0.2);
+            border-color: var(--neon-green);
+        }
+        .post-date {
+            font-size: 0.75rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="hacking-theme">
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="glitch" data-text="DECRYPTING LOGS...">DECRYPTING LOGS...</div>
+            <div class="progress-bar-container">
+                <div id="loader-progress" class="progress-bar"></div>
+            </div>
+            <div id="loader-status" class="status-text">Bypassing Firewalls...</div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="ui-overlay" class="overlay">
+        <!-- Navigation -->
+        <nav class="cyber-nav">
+            <div class="logo">SWAGOTOM<span>[ADMIN]</span></div>
+            <div class="nav-links">
+                <a href="index.html#hero" class="nav-item">INTRO</a>
+                <a href="index.html#about" class="nav-item">SCAN</a>
+                <a href="index.html#skills" class="nav-item">ARSENAL</a>
+                <a href="index.html#experience" class="nav-item">MISSIONS</a>
+                <a href="index.html#projects" class="nav-item">VAULT</a>
+                <a href="posts.html" class="nav-item active">POSTS</a>
+                <a href="index.html#contact" class="nav-item">UP-LINK</a>
+            </div>
+            <div class="access-status">ACCESS: <span class="granted">GRANTED</span></div>
+        </nav>
+
+        <div class="scroll-container" id="scroll-container">
+            <!-- POSTS SECTION -->
+            <section id="posts" class="scene-section content-section" style="padding-top: 15vh; align-items: flex-start;">
+                <div class="section-container">
+                    <h2 class="cyber-title" data-text="SECURE_LOGS">SECURE_LOGS</h2>
+                    
+                    <div class="projects-grid" id="posts-container">
+                        <!-- Posts injected dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <footer class="cyber-footer">
+                <div class="footer-info">
+                    <span class="copyright">&copy; 2026 SWAGOTOM // PROJECT ANTI-GRAVITY</span>
+                    <span class="status">STATUS: STEALTH_MODE_ACTIVE</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

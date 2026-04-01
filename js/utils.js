@@ -16,12 +16,14 @@ export const fetchData = async (url) => {
 
 export const initTypewriter = (elementId, text, speed = 50) => {
     const element = document.getElementById(elementId);
+    if (!element) return;
+    const chars = Array.from(text);
     let i = 0;
-    element.innerHTML = '';
+    element.textContent = '';
 
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+        if (i < chars.length) {
+            element.textContent += chars[i];
             i++;
             setTimeout(type, speed);
         }
