@@ -148,6 +148,15 @@ export const injectPortfolioData = (data) => {
         const post = data.posts.find(p => p.id === postId);
 
         if (post) {
+            // Simple Markdown parser for Command Boxes and Code tags
+            const parseMarkdown = (text) => {
+                return text
+                    .replace(/```([\s\S]+?)```/g, '<div class="command-box">$1</div>') // Code blocks to command boxes
+                    .replace(/`([^`]+?)`/g, '<code>$1</code>') // Inline code
+                    .replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>') // Bold
+                    .replace(/> ([^\n]+)/g, '<blockquote>$1</blockquote>'); // Blockquotes
+            };
+
             articleContainer.innerHTML = `
                 <div class="article-header">
                     <h1>${post.title}</h1>
@@ -156,7 +165,7 @@ export const injectPortfolioData = (data) => {
                         <span>> TS: ${post.date}</span>
                     </div>
                 </div>
-                <div class="article-body">${post.content}</div>
+                <div class="article-body">${parseMarkdown(post.content)}</div>
             `;
             const titleEl = document.querySelector('title');
             if (titleEl) titleEl.textContent = `${post.title} | Swagotom Portfolio`;
