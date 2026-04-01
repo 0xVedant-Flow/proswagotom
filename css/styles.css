@@ -267,6 +267,66 @@ body {
     line-height: 1.8;
 }
 
+/* Social Hub */
+.social-hub-container {
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 255, 65, 0.2) !important;
+}
+
+.social-header {
+    font-family: var(--terminal-font);
+    font-size: 0.8rem;
+    color: var(--neon-green);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.social-btn {
+    padding: 12px 25px;
+    border: 1px solid var(--neon-cyan);
+    background: rgba(0, 255, 255, 0.05);
+    color: var(--neon-cyan);
+    font-family: var(--terminal-font);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-cyan);
+    transform: translateY(-5px);
+}
+
+.social-footer {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    font-family: var(--terminal-font);
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
 /* Grid Layouts */
 .skills-grid,
 .projects-grid,

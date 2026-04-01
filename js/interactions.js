@@ -96,26 +96,6 @@ export const injectPortfolioData = (data) => {
         });
     }
 
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'UPLOADING_INTEL...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = 'TRANSMISSION_SUCCESS! [ACK]';
-                form.reset();
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                }, 3000);
-            }, 2000);
-        });
-    }
-
     const postsContainer = document.getElementById('posts-container');
     if (postsContainer && data.posts) {
         data.posts.forEach(post => {
