@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Til Cash</title>
+    <style>
+        :root {
+            --primary-color: #1A73E8;
+            --text-color: #333333;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1557b0;
+        }
+
+        .contact-box {
+            background-color: rgba(26, 115, 232, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .package-name {
+            font-family: monospace;
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p><strong>Til Cash</strong> - Personal Finance Tracker</p>
+            <p class="last-updated">Last Updated: April 16, 2026</p>
+        </header>
+
+        <section>
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>Til Cash</strong> (<span class="package-name">com.tilcash.app</span>). The Til Cash Team ("we," "our," or "us") is committed to protecting your privacy and ensuring you have a positive experience on our mobile application. This Privacy Policy outlines our practices regarding the collection, use, disclosure, and protection of your information when you use our personal finance tracker application.</p>
+            <p>By using Til Cash, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+        </section>
+
+        <section>
+            <h2>2. Information We Collect</h2>
+            <p>To provide and improve our App, we collect the following types of information:</p>
+            
+            <h3>A. Personal Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> When you register using Google Sign-In or email, we collect your name, email address, and profile picture.</li>
+                <li><strong>Financial Data:</strong> The transaction details, budgets, income, expenses, and notes you input into the app.</li>
+            </ul>
+
+            <h3>B. Automatically Collected Data</h3>
+            <ul>
+                <li><strong>Device Information:</strong> Operating system version, device model, and unique device identifiers.</li>
+                <li><strong>Usage Data:</strong> Information about your interactions with the app, such as crash reports and performance data to help us identify and fix bugs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected data for various purposes, including:</p>
+            <ul>
+                <li>To provide, operate, and maintain the App.</li>
+                <li>To enable cross-device synchronization via Firebase Firestore.</li>
+                <li>To generate personalized financial insights and summaries using artificial intelligence (OpenAI API).</li>
+                <li>To secure your account and data, including PIN/Biometric lock functionalities.</li>
+                <li>To display personalized or non-personalized advertisements (Google AdMob) to support the free version of the App.</li>
+                <li>To analyze app usage and improve user experience.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services Integration</h2>
+            <p>We employ external services to facilitate our App. These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+            <ul>
+                <li><strong>Firebase Authentication & Google Sign-In:</strong> Used to securely manage user authentication.</li>
+                <li><strong>Firebase Cloud Firestore:</strong> Used to store and sync your financial data securely in the cloud.</li>
+                <li><strong>OpenAI API:</strong> Used to process anonymized text data for AI-driven financial insights. We do not use your personal identifiable information to train AI models.</li>
+                <li><strong>Google AdMob:</strong> Used to serve advertisements. AdMob may use device identifiers and cookies to show customized ads based on your interests. For more information, please visit <a href="https://policies.google.com/technologies/ads" target="_blank">Google's ad privacy policy</a>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Local Storage & Security</h2>
+            <p>Security is a top priority for us:</p>
+            <ul>
+                <li><strong>SQLite Local Storage:</strong> We use local databases to ensure the app functions offline and caches data rapidly on your device.</li>
+                <li><strong>Biometric/PIN Lock:</strong> App-level security utilizes your device's native fingerprint/face unlock or a custom PIN to prevent unauthorized access to your financial data.</li>
+                <li><strong>Encryption in Transit & at Rest:</strong> Data transmitted between your device and our cloud servers is encrypted via HTTPS. Data stored on Firestore is encrypted at rest.</li>
+            </ul>
+            <p>While we use commercially acceptable means to protect your Personal Data, remember that no method of transmission over the internet or electronic storage is 100% secure.</p>
+        </section>
+
+        <section>
+            <h2>6. Data Retention and Deletion</h2>
+            <p>We retain your Personal Information and financial data only for as long as is necessary for the purposes set out in this Privacy Policy.</p>
+            <p><strong>Account Deletion:</strong> You have the right to delete your account and all associated data. You can perform this action directly within the App by navigating to <em>Settings > Account > Delete Account</em>. Upon deciding to delete your account, all your personal and financial data will be permanently removed from our active databases (Firebase Firestore) within 30 days.</p>
+        </section>
+
+        <section>
+            <h2>7. Children's Privacy</h2>
+            <p>Our App is not intended for use by children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us so we can take necessary actions to delete it.</p>
+        </section>
+
+        <section>
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+        </section>
+
+        <section class="contact-box">
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Developer:</strong> Til Cash Team</li>
+                <li><strong>Email:</strong> <a href="mailto:hello@swagotom.pro">hello@swagotom.pro</a></li>
+                <li><strong>Country:</strong> Bangladesh</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
